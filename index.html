@@ -9,10 +9,10 @@
 </head>
 
 <body>
-    <form action="https://http://localhost.3000/newtoilets">
+    <form action="https://kloapp.herokuapp.com/add" method="POST">
         <div>
             <label for="city">city</label>
-            <select id="city">
+            <select id="city" name="city">
                 <option value="Ber">Berlin</option>
                 <option value="Düs">Düsseldorf</option>
                 <option value="Ham">Hamburg</option>
@@ -28,30 +28,30 @@
         </div>
         <div>
             <label for="location">Name of Location</label>
-            <input name="Location" type="text" id="location" />
+            <input name="name" type="text" id="location" />
         </div>
         <div>
             <h3>Feautures</h3>
         </div>
         <div>
             <label for="mirror">Mirror</label>
-            <input type="checkbox" name="mirror">
+            <input type="checkbox" name="feat-mirror" id="mirror">
         </div>
         <div>
             <label for="towels">Paper towels</label>
-            <input type="checkbox" name="towels">
+            <input type="checkbox" name="feat-papertowels" id="towels">
         </div>
         <div>
             <label for="perfume">Perfume</label>
-            <input type="checkbox" name="perfume">
+            <input type="checkbox" name="feat-perfume" id="perfume">
         </div>
         <div>
             <label for="soap">Soap</label>
-            <input type="checkbox" name="soap">
+            <input type="checkbox" name="feat-soap" id="soap">
         </div>
         <div>
             <label for="access">Accessibility</label>
-            <input type="text" name="access" id="access">
+            <input type="text" name="feat-access" id="access">
         </div>
         <div>
             <label for="stallnr">Number of Stalls</label>
@@ -60,12 +60,12 @@
         </div>
 
         <div>
-            <label for="seats">Rating</label>
-            <input type="radio" name="seats" value="1" />
-            <input type="radio" name="seats" value="2" />
-            <input type="radio" name="seats" value="3" />
-            <input type="radio" name="seats" value="4" />
-            <input type="radio" name="seats" value="5" />
+            <label for="seats" name="rating">Rating</label>
+            <input name="rating" type="radio" value="1" />
+            <input name="rating" type="radio" value="2" />
+            <input name="rating" type="radio" value="3" />
+            <input name="rating" type="radio" value="4" />
+            <input name="rating" type="radio" value="5" />
         </div>
         <div>
             <input type="submit" value="create" />
