@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <form action="https://http://localhost.3000/newtoilets">
+        <div>
+            <label for="city">city</label>
+            <select id="city">
+                <option value="Ber">Berlin</option>
+                <option value="Düs">Düsseldorf</option>
+                <option value="Ham">Hamburg</option>
+            </select>
+        </div>
+        <div>
+            <label for="street">street</label>
+            <input name="street" type="text" id="street" />
+        </div>
+        <div>
+            <label for="streetnr">House Nr.</label>
+            <input name="streetnr" type="text" id="streetnr" />
+        </div>
+        <div>
+            <label for="location">Name of Location</label>
+            <input name="Location" type="text" id="location" />
+        </div>
+        <div>
+            <h3>Feautures</h3>
+        </div>
+        <div>
+            <label for="mirror">Mirror</label>
+            <input type="checkbox" name="mirror">
+        </div>
+        <div>
+            <label for="towels">Paper towels</label>
+            <input type="checkbox" name="towels">
+        </div>
+        <div>
+            <label for="perfume">Perfume</label>
+            <input type="checkbox" name="perfume">
+        </div>
+        <div>
+            <label for="soap">Soap</label>
+            <input type="checkbox" name="soap">
+        </div>
+        <div>
+            <label for="access">Accessibility</label>
+            <input type="text" name="access" id="access">
+        </div>
+        <div>
+            <label for="stallnr">Number of Stalls</label>
+            <input type="number" name="stalls" id="stallnr">
+
+        </div>
+
+        <div>
+            <label for="seats">Rating</label>
+            <input type="radio" name="seats" value="1" />
+            <input type="radio" name="seats" value="2" />
+            <input type="radio" name="seats" value="3" />
+            <input type="radio" name="seats" value="4" />
+            <input type="radio" name="seats" value="5" />
+        </div>
+        <div>
+            <input type="submit" value="create" />
+        </div>
+    </form>
+</body>
+
+</html>
