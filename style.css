@@ -16,11 +16,22 @@ div {
 
 table {
     border: 1px black solid;
+    margin: 20px auto;
 }
- th {
-     border: 1px solid black;
 
- }
- tr {
-     border: 1px solid black;
- }
+h1 {
+    text-align: center;
+}
+
+th {
+    border: 1px solid black;
+
+}
+
+tr {
+    border: 1px solid black;
+}
+
+td {
+    text-align: center;
+}
