@@ -6,13 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/2f13957952.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <form action="https://kloapp.herokuapp.com/add" method="POST">
         <div>
             <label for="city">city</label>
-            <select id="city" name="city">
+            <select id="city" name="city" required>
+                <option value="">Please select the city</option>
                 <option value="Ber">Berlin</option>
                 <option value="Düs">Düsseldorf</option>
                 <option value="Ham">Hamburg</option>
@@ -20,22 +22,25 @@
         </div>
         <div>
             <label for="street">street</label>
-            <input name="street" type="text" id="street" />
+            <input name="street" required type="text" id="street" minlength="3" maxlength="20" />
         </div>
         <div>
             <label for="streetnr">House Nr.</label>
-            <input name="streetnr" type="text" id="streetnr" />
+            <input name="streetnr" required type="text" id="streetnr" maxlength="10" />
         </div>
         <div>
             <label for="location">Name of Location</label>
-            <input name="name" type="text" id="location" />
+            <input name="name" required type="text" id="location" maxlength="20" />
         </div>
         <div>
             <h3>Feautures</h3>
         </div>
         <div>
-            <label for="mirror">Mirror</label>
-            <input type="checkbox" name="feat-mirror" id="mirror">
+            <label class="switch">
+                <label for="mirror">Mirror</label>
+                <input type="checkbox" name="feat-mirror" id="mirror">
+                <span class="slider round"></span>
+            </label>
         </div>
         <div>
             <label for="towels">Paper towels</label>
@@ -55,17 +60,41 @@
         </div>
         <div>
             <label for="stallnr">Number of Stalls</label>
-            <input type="number" name="stalls" id="stallnr">
+            <input type="number" name="stalls" id="stallnr" max="20" min="1">
 
         </div>
 
-        <div>
-            <label for="seats" name="rating">Rating</label>
-            <input name="rating" type="radio" value="1" />
-            <input name="rating" type="radio" value="2" />
-            <input name="rating" type="radio" value="3" />
-            <input name="rating" type="radio" value="4" />
-            <input name="rating" type="radio" value="5" />
+        <div class="rating">
+            <label>
+                <input name=" stars" required type="radio" value="1" />
+                <span class="icon"><i class="fas fa-toilet"></i></span>
+            </label>
+            <label>
+                <input name=" stars" required type="radio" value="2" />
+                <span class="icon"><i class="fas fa-toilet"></i></span>
+                <span class="icon"><i class="fas fa-toilet"></i></span>
+            </label>
+            <label>
+                <input name=" stars" required type="radio" value="3" />
+                <span class="icon"><i class="fas fa-toilet"></i></span>
+                <span class="icon"><i class="fas fa-toilet"></i></span>
+                <span class="icon"><i class="fas fa-toilet"></i></span>
+            </label>
+            <label>
+                <input name=" stars" required type="radio" value="4" />
+                <span class="icon"><i class="fas fa-toilet"></i></span>
+                <span class="icon"><i class="fas fa-toilet"></i></span>
+                <span class="icon"><i class="fas fa-toilet"></i></span>
+                <span class="icon"><i class="fas fa-toilet"></i></span>
+            </label>
+            <label>
+                <input name=" stars" required type="radio" value="5" />
+                <span class="icon"><i class="fas fa-toilet"></i></span>
+                <span class="icon"><i class="fas fa-toilet"></i></span>
+                <span class="icon"><i class="fas fa-toilet"></i></span>
+                <span class="icon"><i class="fas fa-toilet"></i></span>
+                <span class="icon"><i class="fas fa-toilet"></i></span>
+            </label>
         </div>
         <div>
             <input type="submit" value="create" />
