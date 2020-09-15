@@ -10,42 +10,41 @@
 
 <body>
     <h1>Data for new WC's</h1>
-    <table style="width: 80%; margin: auto;">
-        <tr>
-            <th rowspan="2">city</th>
-            <th rowspan="2">street</th>
-            <th rowspan="2">house number</th>
-            <th rowspan="2">name of location</th>
-            <th colspan="6">features</th>
-            <th rowspan="2">number of stalls</th>
-            <th rowspan="2">rating</th>
-        </tr>
-        <tr>
+    <table id="toilets-table">
+        <thead>
+            <tr>
+                <th> city</th>
+                <th>Location</th>
+                <th>Address</th>
+                <th>Mirror</th>
+                <th> Paper towels</th>
+                <th>Soap</th>
+                <th>Stalls</th>
+                <th>Accessibility</th>
+                <th>rating</th>
+                <th>Perfume</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
 
-            <td>mirror</td>
-            <td>paper</td>
-            <td>towels</td>
-            <td>perfume</td>
-            <td>accessibility</td>
-            <td>soap</td>
-        </tr>
-
-        <tr>
-            <td>Cologne</td>
-            <td>Moltkestr.</td>
-            <td>56</td>
-            <td>Italian Cafe</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>2</td>
-            <td>5</td>
-        </tr>
+                <td class="city"></td>
+                <td class="location"></td>
+                <td class="address"></td>
+                <td class="feat-mirror"></td>
+                <td class="feat-papertowels"></td>
+                <td class="feat-soap"></td>
+                <td class="stalls"></td>
+                <td class="feat-access"></td>
+                <td class="rating"></td>
+                <td class="feat-perfume"></td>
+            </tr>
+        </tbody>
 
     </table>
+    <script src="https://kloapp.herokuapp.com/javascripts/pure.min.js"></script>
+    <script src="https://kloapp.herokuapp.com/javascripts/render.js"></script>
 </body>
+
 
 </html>

@@ -2,21 +2,26 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Courier New', Courier, monospace;
-
-    text-align: center;
 }
 
 form {
-    margin: 10px;
+    margin: 100px;
     padding: 0;
     position: relative;
     border: black 1px solid;
     background-color: pink;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 div {
     margin: 40px;
 }
+
+
+
 
 input:focus {
     background-color: bisque;
@@ -86,7 +91,7 @@ input:checked+.slider:before {
 
 
 /* rating styling*/
-.rating {
+.satisfaction {
     display: inline-block;
     position: relative;
     height: 50px;
@@ -94,7 +99,7 @@ input:checked+.slider:before {
     font-size: 50px;
 }
 
-.rating label {
+.satisfaction label {
     position: absolute;
     top: 0;
     left: 0;
@@ -102,63 +107,69 @@ input:checked+.slider:before {
     cursor: pointer;
 }
 
-.rating label:last-child {
+.satisfaction label:last-child {
     position: static;
 }
 
-.rating label:nth-child(1) {
+.satisfaction label:nth-child(1) {
     z-index: 5;
 }
 
-.rating label:nth-child(2) {
+.satisfaction label:nth-child(2) {
     z-index: 4;
 }
 
-.rating label:nth-child(3) {
+.satisfactiong label:nth-child(3) {
     z-index: 3;
 }
 
-.rating label:nth-child(4) {
+.satisfaction label:nth-child(4) {
     z-index: 2;
 }
 
-.rating label:nth-child(5) {
+.satisfaction label:nth-child(5) {
     z-index: 1;
 }
 
-.rating label input {
+.satisfaction label input {
     position: absolute;
     top: 0;
     left: 0;
     opacity: 0;
 }
 
-.rating label .icon {
+.satisfaction label .icon {
     float: left;
     color: transparent;
 }
 
-.rating label:last-child .icon {
+.satisfaction label:last-child .icon {
     color: #000;
 }
 
-.rating:not(:hover) label input:checked~.icon,
-.rating:hover label:hover input~.icon {
+.satisfaction:not(:hover) label input:checked~.icon,
+.satisfaction:hover label:hover input~.icon {
     color: blue;
 }
 
-.rating label input:focus:not(:checked)~.icon:last-child {
+.satisfaction label input:focus:not(:checked)~.icon:last-child {
     color: #000;
     text-shadow: 0 0 5px #09f;
 }
 
-.rating label i {
+.satisfaction label i {
     margin: 2px;
 }
 
 table {
     border: 1px black solid;
     margin: 20px auto;
+    border-spacing: 0;
+
+}
+
+tr:nth-child(even) {
+    background-color: lightgray;
 }
 
 h1 {
