@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dan_style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+    <title>Toilet Form</title>
+</head>
+
+<body>
+    <form action="https://kloapp.herokuapp.com/add" method="POST">
+        <div>
+            <label for="city">City</label>
+            <select name="city" id="city" required>
+                <option value="MSC">Moscow</option>
+                <option value="NYC">New York</option>
+                <option value="TKY">Tokyo</option>
+                <option value="PRS">Paris</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="zipcode">ZIP Code</label>
+            <input name="zip" type="text" id="zipcode" minlength="5" maxlength="5" required/>
+        </div>
+    
+        <div>
+            <label for="street">Street</label>
+            <input name="street" type="text" id="street" minlength="3" required/>
+        </div>
+
+        <div>
+            <label for="streetnr">House Nr.</label>
+            <input name="streetnr" type="text" id="streetnr" required/>
+        </div>
+
+        <div>
+            <label for="location">Toilet Location</label>
+            <input name="name" type="text" id="location" />
+        </div>
+
+        <h2>Features</h2>
+
+        <div>
+            <label for="mirror">Mirror</label>
+            <input name="feat-mirror" type="checkbox" id="mirror" />
+        </div>
+
+        <div>
+            <label for="papertowels">Paper Towels</label>
+            <input name="feat-papertowels" type="checkbox" id="papertowels" />
+        </div>
+
+        <div>
+            <label for="perfume">Perfume</label>
+            <input name="feat-perfume" type="checkbox" id="perfume" />
+        </div>
+
+        <div>
+            <label for="access">Accessibility</label>
+            <input name="feat-access" type="checkbox" id="access" />
+        </div>
+
+        <div>
+            <label for="soap">Soap</label>
+            <input name="feat-soap" type="checkbox" id="soap" />
+        </div>
+
+        <div>
+            <label for="stallnr">Number Of Stalls</label>
+            <input name="stallnr" type="number" id="stallnr" />
+        </div>
+
+        <div>
+            <label for="seats" name="rating">Number Of Seats</label>
+            <input class="rating" type="radio" name="rating" value="1" />
+            <input class="rating" type="radio" name="rating" value="2" />
+            <input class="rating" type="radio" name="rating" value="3" />
+            <input class="rating" type="radio" name="rating" value="4" />
+            <input class="rating" type="radio" name="rating" value="5" />
+        </div>
+
+        <div>
+            <input id="button" type="submit" value="Flush it!" minlength="1" maxlength="5" required>
+        </div>
+
+    </form>
+
+</body>
+</html>
