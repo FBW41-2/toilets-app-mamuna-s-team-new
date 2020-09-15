@@ -21,6 +21,10 @@
             </select>
         </div>
         <div>
+            <label for="zip">Zip code</label>
+            <input type="text" name="zip" minlength="5" maxlength="5">
+        </div>
+        <div>
             <label for="street">street</label>
             <input name="street" required type="text" id="street" minlength="3" maxlength="20" />
         </div>
@@ -36,23 +40,32 @@
             <h3>Feautures</h3>
         </div>
         <div>
+            <label for="mirror">Mirror</label>
             <label class="switch">
-                <label for="mirror">Mirror</label>
                 <input type="checkbox" name="feat-mirror" id="mirror">
                 <span class="slider round"></span>
             </label>
         </div>
         <div>
             <label for="towels">Paper towels</label>
-            <input type="checkbox" name="feat-papertowels" id="towels">
+            <label class="switch">
+                <input type="checkbox" name="feat-papertowels" id="towels">
+                <span class="slider round"></span>
+            </label>
         </div>
         <div>
             <label for="perfume">Perfume</label>
-            <input type="checkbox" name="feat-perfume" id="perfume">
+            <label class="switch">
+                <input type="checkbox" name="feat-perfume" id="perfume">
+                <span class="slider round"></span>
+            </label>
         </div>
         <div>
             <label for="soap">Soap</label>
-            <input type="checkbox" name="feat-soap" id="soap">
+            <label class="switch">
+                <input type="checkbox" name="feat-soap" id="soap">
+                <span class="slider round"></span>
+            </label>
         </div>
         <div>
             <label for="access">Accessibility</label>
@@ -67,7 +80,7 @@
         <div class="rating">
             <label>
                 <input name=" stars" required type="radio" value="1" />
-                <span class="icon"><i class="fas fa-toilet"></i></span>
+                <span class="icon"> <i class="fas fa-toilet"></i> </span>
             </label>
             <label>
                 <input name=" stars" required type="radio" value="2" />
