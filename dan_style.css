@@ -1,17 +1,28 @@
 * {
     font-family: Ubuntu, sans-serif;
-    background: lightgoldenrodyellow;
+    background: #2b2e4a;
+    color: #fbe8d3;
 }
 
 h2 {
+    color: #e84545;
     text-align: center;
-    margin: 1.5em;
-    border-bottom: 1px solid black;
+    margin: 1em;
+    border-bottom: 1px solid #53354a;
+}
+
+input[type=text]:focus {
+    background-color: #53354a;
+}
+
+input:required:invalid {
+    background-color: #e84545;
 }
 
 select {
-    border: 2px solid black;;
+    border-radius: 5px;
 }
+
 .addressgrid {
     display: grid;
     height: 40px;
@@ -26,19 +37,54 @@ select {
 
 .addrgrid-input {
     grid-column: 4/6;
+    border-radius: 5px;
 }
 
+p {
+    text-align: center;
+    font-size: 0.7em;
+}
 .featgrid {
     display: grid;
-    grid-template-columns: 1fr 1fr 100px 20px 1fr 1fr;
-    place-items: start;
+    grid-template-columns: 1fr 100px 60px 1fr 1fr;
+    justify-items: start;
+    align-items: center;
 }
 
 .featgrid-item {
-    grid-column: 3/4;
+    grid-column: 2/4;
 }
 
 .featcheckbox {
-    grid-column: 4/5;
+    grid-column: 5/6;
 }
 
+.infogrid {
+    display: grid;
+    height: 40px;
+    grid-template-columns: 1fr 1fr 100px 100px 1fr 1fr;
+    gap: 5px;
+    align-items: center;
+}
+
+.infogrid-item {
+    grid-column: 2/4;
+}
+
+.infogrid-input {
+    border-radius: 5px;
+    grid-column: 4/6;
+}
+
+.button {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#button {
+    font-size: 1em;
+    font-weight: bold;
+    padding: 10px 40px 10px 40px;
+    border-radius: 5px;
+}
