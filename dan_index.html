@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,66 +12,79 @@
 
 <body>
     <form action="https://kloapp.herokuapp.com/add" method="POST">
-        <div>
-            <label for="city">City</label>
-            <select name="city" id="city" required>
-                <option value="MSC">Moscow</option>
-                <option value="NYC">New York</option>
-                <option value="TKY">Tokyo</option>
-                <option value="PRS">Paris</option>
-            </select>
-        </div>
 
-        <div>
-            <label for="zipcode">ZIP Code</label>
-            <input name="zip" type="text" id="zipcode" minlength="5" maxlength="5" required/>
-        </div>
-    
-        <div>
-            <label for="street">Street</label>
-            <input name="street" type="text" id="street" minlength="3" required/>
-        </div>
+        <h2>Toilet Location</h2>
 
-        <div>
-            <label for="streetnr">House Nr.</label>
-            <input name="streetnr" type="text" id="streetnr" required/>
-        </div>
+        <section id="address">
 
-        <div>
-            <label for="location">Toilet Location</label>
-            <input name="name" type="text" id="location" />
-        </div>
+            <div class="addressgrid">
+                <label class="addrgrid-item" for="city">City</label>
+                <select class="addrgrid-input" name="city" id="city" required>
+                    <option value="">Where are you?</option>
+                    <option value="MSC">Moscow</option>
+                    <option value="NYC">New York</option>
+                    <option value="TKY">Tokyo</option>
+                    <option value="PRS">Paris</option>
+                </select>
+            </div>
+
+            <div class="addressgrid">
+                <label class="addrgrid-item" for="zipcode">ZIP Code</label>
+                <input class="addrgrid-input" name="zip" type="text" id="zipcode" minlength="5" maxlength="5" required />
+            </div>
+
+            <div class="addressgrid">
+                <label class="addrgrid-item" for="street">Street</label>
+                <input class="addrgrid-input" name="street" type="text" id="street" minlength="3" required />
+            </div>
+
+            <div class="addressgrid">
+                <label class="addrgrid-item" for="streetnr">House Nr.</label>
+                <input class="addrgrid-input" name="streetnr" type="text" id="streetnr" required />
+            </div>
+
+            <div class="addressgrid">
+                <label class="addrgrid-item" for="location">Additional location hints (<i>inside a cafe</i>, <i>on the street</i>
+                    etc.)</label>
+                <input class="addrgrid-input" name="name" type="text" id="location" />
+            </div>
+
+        </section>
 
         <h2>Features</h2>
 
-        <div>
-            <label for="mirror">Mirror</label>
-            <input name="feat-mirror" type="checkbox" id="mirror" />
-        </div>
+        <section id="features">
 
-        <div>
-            <label for="papertowels">Paper Towels</label>
-            <input name="feat-papertowels" type="checkbox" id="papertowels" />
-        </div>
+            <div class="featgrid">
+                <label class="featgrid-item" for="mirror">Mirror</label>
+                <input class="featcheckbox" name="feat-mirror" type="checkbox" id="mirror" />
+            </div>
 
-        <div>
-            <label for="perfume">Perfume</label>
-            <input name="feat-perfume" type="checkbox" id="perfume" />
-        </div>
+            <div class="featgrid">
+                <label class="featgrid-item" for="papertowels">Paper Towels</label>
+                <input class="featcheckbox" name="feat-papertowels" type="checkbox" id="papertowels" />
+            </div>
 
-        <div>
-            <label for="access">Accessibility</label>
-            <input name="feat-access" type="checkbox" id="access" />
-        </div>
+            <div class="featgrid">
+                <label class="featgrid-item" for="perfume">Perfume</label>
+                <input class="featcheckbox" name="feat-perfume" type="checkbox" id="perfume" />
+            </div>
 
-        <div>
-            <label for="soap">Soap</label>
-            <input name="feat-soap" type="checkbox" id="soap" />
-        </div>
+            <div class="featgrid">
+                <label class="featgrid-item" for="access">Accessibility</label>
+                <input class="featcheckbox" name="feat-access" type="checkbox" id="access" />
+            </div>
+
+            <div class="featgrid">
+                <label class="featgrid-item" for="soap">Soap</label>
+                <input class="featcheckbox" name="feat-soap" type="checkbox" id="soap" />
+            </div>
+
+        </section>
 
         <div>
             <label for="stallnr">Number Of Stalls</label>
-            <input name="stallnr" type="number" id="stallnr" />
+            <input name="stallnr" type="number" id="stallnr" min="1" max="10"/>
         </div>
 
         <div>
@@ -83,10 +97,11 @@
         </div>
 
         <div>
-            <input id="button" type="submit" value="Flush it!" minlength="1" maxlength="5" required>
+            <input id="button" type="submit" value="Flush it!" required>
         </div>
 
     </form>
 
 </body>
+
 </html>

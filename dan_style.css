@@ -3,43 +3,42 @@
     background: lightgoldenrodyellow;
 }
 
-input, label {
-    display: block;
-    padding: 0.1em;
-}
-
-input, select {
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 1.5em;
+h2 {
+    text-align: center;
+    margin: 1.5em;
+    border-bottom: 1px solid black;
 }
 
 select {
-    width: 210px;
-    height: 25px;
-    border: 2px solid black;
+    border: 2px solid black;;
+}
+.addressgrid {
+    display: grid;
+    height: 40px;
+    grid-template-columns: 1fr 1fr 100px 100px 1fr 1fr;
+    gap: 5px;
+    align-items: center;
 }
 
-label {
-    text-align: center;
-    margin-bottom: 1em;
-    font-weight: bold;
+.addrgrid-item {
+    grid-column: 2/4;
 }
 
-h2 {
-    text-align: center;
-    margin: 4em;
+.addrgrid-input {
+    grid-column: 4/6;
 }
 
-.rating {
-    display: inline;
-    margin: 20px;
+.featgrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 100px 20px 1fr 1fr;
+    place-items: start;
 }
 
-#button {
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 1.5em;
-    padding: 0.5em 1.5em 0.5em 1.5em;
+.featgrid-item {
+    grid-column: 3/4;
 }
+
+.featcheckbox {
+    grid-column: 4/5;
+}
+
