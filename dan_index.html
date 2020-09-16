@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dan_style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+    <title>Toilet Form</title>
+</head>
+
+<body>
+    <form action="https://kloapp.herokuapp.com/add" method="POST">
+
+        <h2>Toilet Location</h2>
+
+        <section>
+
+            <div class="addressgrid">
+                <label class="addrgrid-item" for="city">City *</label>
+                <select class="addrgrid-input" name="city" id="city" required>
+                    <option value="">Do you know where you are?</option>
+                    <option value="DUS">Düsseldorf</option>
+                    <option value="MUN">Münich</option>
+                    <option value="LPZ">Leipzig</option>
+                    <option value="BRL">Berlin</option>
+                    <option value="IDK">What planet is this? O_o</option>
+                </select>
+            </div>
+
+            <div class="addressgrid">
+                <label class="addrgrid-item" for="zipcode">ZIP Code *</label>
+                <input class="addrgrid-input" name="zip" type="text" pattern="[0-9]{5}" placeholder="Five digits, bro!"
+                    id="zipcode" minlength="5" maxlength="5" required />
+            </div>
+
+            <div class="addressgrid">
+                <label class="addrgrid-item" for="street">Street *</label>
+                <input class="addrgrid-input" name="street" type="text" id="street" placeholder="Use the street name"
+                    minlength="3" required />
+            </div>
+
+            <div class="addressgrid">
+                <label class="addrgrid-item" for="streetnr">House Nr. *</label>
+                <input class="addrgrid-input" name="streetnr" type="text" id="streetnr" pattern="[0-9]{1,5}"
+                    placeholder="Look at the closest house for it" required />
+            </div>
+
+            <div class="addressgrid">
+                <label class="addrgrid-item" for="phone">Your phone number</label>
+                <input class="addrgrid-input" name="phonenr" type="text" id="phone" pattern="[0-9]{10,12}"
+                    placeholder="In case you are a beautiful girl" />
+            </div>
+
+            <div class="addressgrid">
+                <label class="addrgrid-item" for="location">Additional location hints</label>
+                <input class="addrgrid-input" name="name" type="text" id="location"
+                    placeholder="Inside a cafe, on the street etc." />
+            </div>
+
+            <p>* - is a required field, amigo. Do it!</p>
+        </section>
+
+        <h2>Features</h2>
+
+        <section>
+
+            <div class="featgrid">
+                <label class="featgrid-item" for="mirror">Mirror</label>
+                <label class="switch">
+                    <input class="featcheckbox" type="checkbox" name="feat-mirror" id="mirror">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+
+            <div class="featgrid">
+                <label class="featgrid-item" for="papertowels">Paper Towels</label>
+                <label class="switch">
+                    <input class="featcheckbox" name="feat-papertowels" type="checkbox" id="papertowels">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+
+            <div class="featgrid">
+                <label class="featgrid-item" for="perfume">Perfume</label>
+                <label class="switch">
+                    <input class="featcheckbox" name="feat-perfume" type="checkbox" id="perfume">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+
+            <div class="featgrid">
+                <label class="featgrid-item" for="soap">Soap</label>
+                <label class="switch">
+                    <input class="featcheckbox" name="feat-soap" type="checkbox" id="soap">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+
+            <div class="featgrid">
+                <label class="featgrid-item" for="access">Accessibility</label>
+                <label class="switch">
+                    <input class="featcheckbox" name="feat-access" type="checkbox" id="access">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+
+            <div class="featgrid">
+                <label class="featgrid-item" for="homeless">Nifty homeless guys</label>
+                <label class="switch">
+                    <input class="featcheckbox" name="feat-homeless" type="checkbox" id="homeless">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+
+        </section>
+
+        <h2>Additional Information</h2>
+
+        <section>
+
+            <div class="infogrid">
+                <label class="infogrid-item" for="stallnr">Number Of Stalls</label>
+                <input class="infogrid-input" name="stallnr" type="number" id="stallnr" min="1" max="10"
+                    title="Count them now, I mean it!" />
+            </div>
+
+            <div class="infogrid">
+                <label class="infogrid-item" for="reason">Why are you here anyway?</label>
+                <select class="infogrid-input" name="reason" id="reason">
+                    <option value="">Try to be honest, buddy!</option>
+                    <option value="NumeroUno">Number one</option>
+                    <option value="NumeroDeux">Number two</option>
+                    <option value="LPZ">Just getting some fresh air</option>
+                </select>
+            </div>
+
+            <div class="infogrid">
+                <label class="infogrid-item" for="seats" name="rating">Your rating</label>
+                <input class="rating" type="radio" name="rating" value="1" />
+                <input class="rating" type="radio" name="rating" value="2" />
+                <input class="rating" type="radio" name="rating" value="3" />
+                <input class="rating" type="radio" name="rating" value="4" />
+                <input class="rating" type="radio" name="rating" value="5" />
+            </div>
+
+        </section>
+
+        <div class="button">
+            <input id="button" type="submit" value="Flush it!" required>
+        </div>
+
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,143 @@
+* {
+    font-family: Ubuntu, sans-serif;
+    background: #2b2e4a;
+    color: #fbe8d3;
+}
+
+h2 {
+    color: #e84545;
+    text-align: center;
+    margin: 1em;
+    border-bottom: 1px solid #53354a;
+}
+
+input[type=text]:focus, input[type=number]:focus {
+    background-color: #53354a;
+    box-shadow: 0 0 10px #e84545;
+}
+
+select {
+    border-radius: 5px;
+}
+
+.addressgrid {
+    display: grid;
+    height: 40px;
+    grid-template-columns: 1fr 1fr 100px 100px 1fr 1fr;
+    gap: 5px;
+    align-items: center;
+}
+
+.addrgrid-item {
+    grid-column: 2/4;
+}
+
+.addrgrid-input {
+    grid-column: 4/6;
+    border-radius: 5px;
+}
+
+p {
+    text-align: center;
+    font-size: 0.7em;
+}
+
+.featgrid {
+    display: grid;
+    grid-template-columns: 1fr 100px 100px 1fr 1fr;
+    justify-items: start;
+    align-items: center;
+}
+
+.featgrid-item {
+    grid-column: 2/5;
+}
+
+.featcheckbox {
+    grid-column: 5;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 17px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #53354a;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 13px;
+    width: 13px;
+    left: 3px;
+    bottom: 2px;
+    background-color: #fbe8d3;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #e84545;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 5px #e84545;
+}
+
+input:checked+.slider:before {
+    transform: translateX(11px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.infogrid {
+    display: grid;
+    height: 40px;
+    grid-template-columns: 1fr 1fr 100px 100px 1fr 1fr;
+    gap: 5px;
+    align-items: center;
+}
+
+.infogrid-item {
+    grid-column: 2/4;
+}
+
+.infogrid-input {
+    border-radius: 5px;
+    grid-column: 4/6;
+}
+
+.button {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#button {
+    font-size: 1em;
+    font-weight: bold;
+    padding: 10px 40px 10px 40px;
+    border-radius: 5px;
+}
