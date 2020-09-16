@@ -13,13 +13,13 @@
     <form action="https://kloapp.herokuapp.com/add" method="POST">
         <h1>WC Information collection Form</h1>
         <div>
-            <label for="city">city</label>
-            <select id="city" name="city" required>
-                <option value="">Please select the city</option>
-                <option value="Ber">Berlin</option>
-                <option value="Düs">Düsseldorf</option>
-                <option value="Ham">Hamburg</option>
-            </select>
+            <label for="citysel">city</label>
+            <input type="text" name="city" id="citysel" list="city">
+            <datalist id="city">
+                <option value="Berlin"></option>
+                <option value="Düsseldorf"></option>
+                <option value="Hamburg"></option>
+            </datalist>
         </div>
         <div>
             <label for="zip">Zip code</label>
@@ -78,7 +78,7 @@
 
         </div>
         <div>
-            <label for="sat">Rating</label>
+            <label for="sat">Rate it</label>
         </div>
         <div class="satisfaction">
 
