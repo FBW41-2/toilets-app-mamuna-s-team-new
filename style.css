@@ -184,9 +184,10 @@ h2 {
 }
 table {
     border: 1px black solid;
-    margin: 20px 100px;
+    margin: 20px auto;
     border-spacing: 0;
     background-color: pink;
+    width: 70%;
 
 }
 
@@ -198,7 +199,7 @@ h1 {
     text-align: center;
     background-color: pink;
     width: 70%;
-    margin: auto;
+    margin: 20px auto;
 }
 
 th {
